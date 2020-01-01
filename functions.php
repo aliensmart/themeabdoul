@@ -28,6 +28,21 @@
         ]);
 
 
+    //main sidebare Setup
+    function themeabdoul_widgets_init(){
+        register_sidebar( [
+            'name'          => esc_html__('Main Sidebar', 'themeabdoul'),
+            'id'            => 'main-sidebar',
+            'description'   => esc_html( 'Add Widgets for the main sidebar here', 'themeabdoul' ),
+            'before_widget' => '<section class="widgets">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '<h2>',
+        ] );
+    }
+    add_action('widgets_init', 'themeabdoul_widgets_init')
+
+
 
 
 
